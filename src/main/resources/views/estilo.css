@@ -1,0 +1,48 @@
+body{
+	font: 100% Lucida Sans, Verdana;
+	margin: 15px;
+	line-height: 30px;
+}
+
+
+#topo{
+	border-radius: 15px;
+	background-color: #04aa6d;
+	padding: 10px;
+	color: white;
+	text-align: center;
+	margin: 5px;
+}
+
+#corpo{
+	position: relative;
+	overflow: auto;
+	margin: 5px;
+}
+
+#menu{
+	width: 220px;
+	float: left;
+	background-color: #04aa6d;
+	color: white;
+	padding: 5px;
+	border-radius: 15px;
+}
+
+#conteudo{
+	background-color: #04aa6d;
+	color: white;
+	padding: 5px;
+	border-radius: 15px;
+	width: 1080px;
+	float: right;
+}
+
+#rodape{
+	border-radius: 15px;
+	background-color: #04aa6d;
+	padding: 10px;
+	color: white;
+	text-align: center;
+	margin: 5px;
+}
