@@ -5,10 +5,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class GrupoController {
+public class CategoriaController {
 	@GetMapping({"/grupo", "/"})
 	public String listarGrupo(Model modelo) {
-		modelo.addAttribute("grupo", servico.listaGrupo());
+		modelo.addAttribute("grupo", servico.listarCategorias());
 		return "grupo"; //mostrar a página grupo.html
 	}
 }
