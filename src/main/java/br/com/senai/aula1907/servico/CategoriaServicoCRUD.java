@@ -10,6 +10,7 @@ import br.com.senai.aula1907.repository.CategoriaRepository;
 
 @Service
 public class CategoriaServicoCRUD implements CategoriaServico{
+	
 	@Autowired
 	private CategoriaRepository repository;
 	

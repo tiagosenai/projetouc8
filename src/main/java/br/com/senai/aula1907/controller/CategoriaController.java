@@ -13,9 +13,9 @@ public class CategoriaController {
 	@Autowired
 	private CategoriaServico servico;
 	
-	@GetMapping({"/grupo", "/"})
+	@GetMapping({"/categoria", "/"})
 	public String listarGrupo(Model modelo) {
-		modelo.addAttribute("grupo", servico.listarCategorias());
-		return "grupo"; //mostrar a página grupo.html
+		modelo.addAttribute("categoria", servico.listarCategorias());
+		return "categoria"; //mostrar a página grupo.html
 	}
 }
