@@ -41,4 +41,20 @@ public class CategoriaController {
 		servico.salvarCategoria(categoria);
 		return "redirect:/categoria";
 	}
+	
+	@GetMapping({"/categoria/editar/{id}"})
+	public String editarCategoria(@PathVariable Integer id, Model modelo) {
+		modelo.addAttribute("categoria", servico.consultarCategoriaId(id));
+		return "editarCategoria";
+	}
+	
+	@PostMapping("/categoria/{id}")
+	public String atualizarCategoria(@PathVariable Integer id, @ModelAttribute("categoria") Categoria categoria, Model modelo) {
+		Categoria cat = servico.consultarCategoriaId(id);
+		cat.setId(id);
+		cat.setDescricao(categoria.getDescricao());
+		cat.setAtivo(categoria.getAtivo());
+		servico.atualizarCategoria(cat);
+		return "redirect:/categoria";
+	}
 }
