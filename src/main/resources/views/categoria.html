@@ -64,12 +64,17 @@
       <tr>
         <th>Categoria</th>
         <th>Ativo</th>
+        <th style="text-align: center;">Opções</th>
       </tr>
     </thead>
     <tbody>
       <tr th:each="categoria:${categoria}">
         <td th:text=${categoria.descricao}>Categoria</td>
         <td th:text=${categoria.ativo}>Ativo</td>
+        <td>
+        	<a th:href="@{/categoria/{id}(id=${categoria.id})}" class="btn btn-outline-danger">Apagar</a>
+        	<a class="btn btn-outline-warning">Editar</a>
+        </td>
       </tr>
     </tbody>
   </table>
